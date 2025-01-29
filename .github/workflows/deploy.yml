@@ -21,7 +21,7 @@ jobs:
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
-          deno-version: v2.x
+          deno-version: v1.x
 
       - name: Build step
         run: "deno task build"
@@ -29,8 +29,8 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "ericcson24-graphql-age-20"
+          project: "ericcson24-graphql-age-60"
           entrypoint: "main.ts"
-          root: ".mongodb+srv://usuario:1234@cluster.il6dy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster"
+          root: "."
           
           
