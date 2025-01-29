@@ -7,6 +7,7 @@ import { resolvers } from "./resolvers.ts";
 import { GraphQLError } from "graphql";
 
 //Conectarse a la base de datos
+console.log("Variables de entorno disponibles:", Deno.env.toObject());
 const MONGO_URL = Deno.env.get("MONGO_URL")
 if(!MONGO_URL) throw new GraphQLError("MONGO URL NOT EXISTS")
 //enlace cogido
