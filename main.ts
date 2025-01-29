@@ -9,6 +9,7 @@ import { GraphQLError } from "graphql";
 //Conectarse a la base de datos
 console.log("Variables de entorno disponibles:", Deno.env.toObject());
 const MONGO_URL = Deno.env.get("MONGO_URL")
+console.log("Valor de MONGO_URL:", MONGO_URL);
 if(!MONGO_URL) throw new GraphQLError("MONGO URL NOT EXISTS")
 //enlace cogido
 const client = new MongoClient(MONGO_URL)
