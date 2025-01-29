@@ -21,16 +21,16 @@ jobs:
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
 
       - name: Build step
-        run: "deno task build"
+        run: "deno task dev"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "ericcson24-graphql-age-95"
+          project: "ericcson24-graphql-age-22"
           entrypoint: "main.ts"
-          root: "."
+          root: ""
           
           
